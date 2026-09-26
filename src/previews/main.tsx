@@ -25,12 +25,12 @@ function Comparison() {
           <h1 className="text-3xl leading-tight font-medium tracking-[-0.035em] sm:text-5xl">Какой сайт больше про тебя?</h1>
           <p className="mt-5 max-w-150 text-base leading-7 text-[#535b51]">Три разные страницы на твоём содержании. Для основного сайта выбран «Живой плакат». Здесь можно посмотреть и сравнить первоначальные варианты.</p>
         </div>
-        <a href="/" className="inline-flex min-h-11 items-center gap-2 text-sm underline underline-offset-4 focus-visible:ring-[#315423] focus-visible:ring-offset-[#efefed]"><ArrowLeft aria-hidden="true" className="size-4" />Текущий сайт</a>
+        <a href={import.meta.env.BASE_URL} className="inline-flex min-h-11 items-center gap-2 text-sm underline underline-offset-4 focus-visible:ring-[#315423] focus-visible:ring-offset-[#efefed]"><ArrowLeft aria-hidden="true" className="size-4" />Текущий сайт</a>
       </header>
       <div className="mt-9 grid items-start gap-10 lg:grid-cols-3 lg:gap-7">
         {options.map((option, index) => <article key={option.id} className="min-w-0">
           <a href={`?view=${option.id}`} aria-label={`Открыть вариант: ${option.name}`} className="block overflow-hidden rounded-xl bg-white focus-visible:ring-[#315423] focus-visible:ring-offset-[#efefed]">
-            <img src={`/previews/${option.id}.webp`} width={1440} height={1000} alt={`Первый экран варианта «${option.name}»`} className="aspect-[36/25] h-auto w-full object-cover" />
+            <img src={`${import.meta.env.BASE_URL}previews/${option.id}.webp`} width={1440} height={1000} alt={`Первый экран варианта «${option.name}»`} className="aspect-[36/25] h-auto w-full object-cover" />
           </a>
           <div className="mt-5 flex items-center gap-3">
             <span aria-hidden="true" className={`grid size-8 shrink-0 place-items-center rounded-full text-xs font-semibold text-white ${option.color}`}>{index + 1}</span>
@@ -42,7 +42,7 @@ function Comparison() {
       </div>
       <footer className="mt-12 flex flex-wrap items-center justify-between gap-6 border-t border-[#ccd0c9] pt-7">
         <p className="max-w-155 text-sm leading-7 text-[#535b51]">Нравится направление, но хочется что-то поменять? Напиши, что оставить и что убрать. Можно также попросить совершенно другие варианты.</p>
-        <a href="/" className="inline-flex min-h-12 items-center gap-3 rounded-lg bg-[#222522] px-6 text-sm font-semibold text-white focus-visible:ring-[#315423] focus-visible:ring-offset-[#efefed]">Открыть выбранный сайт<ArrowUpRight aria-hidden="true" className="size-4" /></a>
+        <a href={import.meta.env.BASE_URL} className="inline-flex min-h-12 items-center gap-3 rounded-lg bg-[#222522] px-6 text-sm font-semibold text-white focus-visible:ring-[#315423] focus-visible:ring-offset-[#efefed]">Открыть выбранный сайт<ArrowUpRight aria-hidden="true" className="size-4" /></a>
       </footer>
     </main>
   </div>
@@ -54,9 +54,9 @@ function Preview() {
   return <>
     <div className={capture ? undefined : 'pb-16'}><Page /></div>
     {!capture && <nav aria-label="Навигация по вариантам дизайна" className="fixed inset-x-0 bottom-0 z-50 flex flex-wrap items-center justify-center gap-x-6 gap-y-1 border-t border-[#ccd0c9] bg-[#fafaf7] px-4 py-2 font-sans text-[#222522]">
-      <a href="/design-preview.html" className="inline-flex min-h-11 items-center gap-2 text-sm focus-visible:ring-[#315423] focus-visible:ring-offset-[#fafaf7]"><ArrowLeft aria-hidden="true" className="size-4" />Все варианты</a>
+      <a href={`${import.meta.env.BASE_URL}design-preview.html`} className="inline-flex min-h-11 items-center gap-2 text-sm focus-visible:ring-[#315423] focus-visible:ring-offset-[#fafaf7]"><ArrowLeft aria-hidden="true" className="size-4" />Все варианты</a>
       <span className="hidden text-xs text-[#62675f] sm:inline">{current.name} · предпросмотр</span>
-      <a href="/" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold focus-visible:ring-[#315423] focus-visible:ring-offset-[#fafaf7]">Основной сайт<ArrowUpRight aria-hidden="true" className="size-4" /></a>
+      <a href={import.meta.env.BASE_URL} className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold focus-visible:ring-[#315423] focus-visible:ring-offset-[#fafaf7]">Основной сайт<ArrowUpRight aria-hidden="true" className="size-4" /></a>
     </nav>}
   </>
 }

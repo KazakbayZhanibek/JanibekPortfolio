@@ -38,7 +38,7 @@ export default function EditorialPreview() {
 
           <figure className="m-0 min-w-0 px-5 pb-8 sm:px-10 lg:flex lg:flex-col lg:pb-0 lg:pl-0 lg:pr-0">
             <img
-              src="/previews/assets/mountains.jpg"
+              src={`${import.meta.env.BASE_URL}previews/assets/mountains.jpg`}
               alt="Заснеженные вершины и горный ландшафт"
               width={1600}
               height={2000}
@@ -84,7 +84,7 @@ export default function EditorialPreview() {
             {projects.map((project) => (
               <li key={project.id} className="grid grid-cols-[80px_minmax(0,1fr)] gap-x-4 gap-y-2 border-b border-[#173d34]/25 py-5 sm:grid-cols-[144px_minmax(0,1fr)_auto] sm:items-center sm:gap-x-7 sm:py-6">
                 <img
-                  src={`/images/projects/${project.id}-desktop.webp`}
+                  src={`${import.meta.env.BASE_URL}images/projects/${project.id}-desktop.webp`}
                   alt=""
                   width={1440}
                   height={1000}

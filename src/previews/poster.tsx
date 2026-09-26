@@ -124,7 +124,7 @@ export default function PosterPreview() {
                       <div className="grid gap-5 sm:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)]">
                         <figure className="min-w-0">
                           <img
-                            src={`/images/projects/${project.id}-desktop.webp`}
+                            src={`${import.meta.env.BASE_URL}images/projects/${project.id}-desktop.webp`}
                             alt={`Интерфейс проекта «${project.name}», компьютерная версия`}
                             width={1440}
                             height={1000}

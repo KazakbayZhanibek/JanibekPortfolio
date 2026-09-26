@@ -19,7 +19,7 @@ http://127.0.0.1:5173/design-preview.html — сравнение трёх раб
 Добавьте к design-preview.html ?view=notebook, ?view=editorial или ?view=poster,
 чтобы открыть один вариант. Они намеренно сохранены, а не брошены после выбора.
 Vite собирает и index.html, и design-preview.html. При другом порте используйте
-адрес из терминала. Сайт пока работает локально, не опубликован.
+адрес из терминала. Публичный адрес и порядок публикации указаны ниже.
 
 Что редактировать
 src/content.ts — имя, возраст, общие RU/EN тексты биографии, контакты и проекты.
@@ -72,8 +72,16 @@ Manrope и IBM Plex Mono поставляются локально через Fo
 Записи происхождения покрывают 14 растров: 10 проектов, 3 превью и 1 стоковое фото.
 
 Публикация
-Это статический React-сайт. Соберите npm run build и разместите dist/ на
-статическом хостинге. В интернет сайт пока не опубликован.
+Адрес: https://kazakbayzhanibek.github.io/JanibekPortfolio/
+Репозиторий: https://github.com/KazakbayZhanibek/JanibekPortfolio
+В Settings → Pages выбран Source: GitHub Actions, не main / (root).
+При push в main workflow .github/workflows/deploy-pages.yml выполняет npm ci,
+npm run build и публикует только dist/ через официальные Pages Actions.
+Повторный запуск доступен в Actions → Deploy portfolio to GitHub Pages.
+Не публикуйте исходный index.html напрямую: браузер не исполняет src/main.tsx.
+Относительная base в Vite и import.meta.env.BASE_URL сохраняют пути к ресурсам,
+снимкам и страницам вариантов внутри /JanibekPortfolio/.
+На другом статическом хостинге также размещайте содержимое dist/.
 Нет сервера сбора заявок и фиктивной формы. GitHub уже доступен; ссылки на почту
 и Telegram появятся только после заполнения соответствующих полей.
 
@@ -97,7 +105,7 @@ Notebook и editorial сохранены как работающие альте�
 .agents/skills/developer-portfolio-skill/
   Источник: https://github.com/yashrajnayak/developer-portfolio-skill
   Применено правило достоверности: только предоставленные пользователем факты.
-  LinkedIn-импорт, генерация резюме, замена шаблона и публикация не запускались:
+  LinkedIn-импорт, генерация резюме и замена шаблона не запускались:
   этот сайт остаётся личной галереей, а не страницей кандидата.
 .agents/skills/frontend-design/
   Источник: https://github.com/vipulgupta2048/codex-skills

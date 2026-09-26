@@ -24,7 +24,7 @@ Confirmed: name Жанибек (English spelling Zhanibek is provisional), age 2
 
 ## Capabilities and Constraints
 
-Person-first introduction, biography and interests in RU/EN. Keyboard-operable topic selection with a clear selected state. The Projects sheet preserves list/gallery, category filters, desktop/mobile screenshot switching, downloads, previous/next project navigation and focus-returning dialogs. Public website links only where inspected; local/sample captures disclosed. No portrait or certificate placeholders while materials are unavailable. Shared biography and project text live in `src/content.ts`; some topic-specific bilingual copy lives in `src/App.tsx`. Project at C:/Users/Janchik/Desktop/zhanibek-portfolio; local only, not published.
+Person-first introduction, biography and interests in RU/EN. Keyboard-operable topic selection with a clear selected state. The Projects sheet preserves list/gallery, category filters, desktop/mobile screenshot switching, downloads, previous/next project navigation and focus-returning dialogs. Public website links only where inspected; local/sample captures disclosed. No portrait or certificate placeholders while materials are unavailable. Shared biography and project text live in `src/content.ts`; some topic-specific bilingual copy lives in `src/App.tsx`. Project at C:/Users/Janchik/Desktop/zhanibek-portfolio. GitHub Pages deployment at https://kazakbayzhanibek.github.io/JanibekPortfolio/ uses `.github/workflows/deploy-pages.yml` to build and publish only `dist/`; never serve raw TypeScript sources.
 
 ## Brand Commitments
 
@@ -39,7 +39,7 @@ The user-selected poster replaces FRAME as the current visual authority: oxblood
 
 ## Retained Alternatives and Assets
 
-Three working alternatives are deliberately retained in `src/previews/`: notebook (personal notes), editorial (a photographic magazine composition) and poster (the chosen direction). `/design-preview.html` compares all three; `?view=notebook`, `?view=editorial` and `?view=poster` open each alternative. Vite builds both the main `index.html` and `design-preview.html`; these are maintained previews, not abandoned scaffolding or additional published sites.
+Three working alternatives are deliberately retained in `src/previews/`: notebook (personal notes), editorial (a photographic magazine composition) and poster (the chosen direction). `design-preview.html` under the site's base path compares all three; `?view=notebook`, `?view=editorial` and `?view=poster` open each alternative. Vite builds both the main `index.html` and `design-preview.html`; these are maintained previews, not abandoned scaffolding or separate websites.
 
 Local Unbounded and Prata font files and their OFL license texts live in `public/previews/assets/`; Manrope and IBM Plex Mono are bundled from local Fontsource packages. `public/previews/sources.json` records font sources, preview captures and the Unsplash-licensed mountain photo. That stock image is only used by the editorial alternative: it is not a photograph by or of Zhanibek, and no location is asserted. The selected main poster uses no personal photograph.
 

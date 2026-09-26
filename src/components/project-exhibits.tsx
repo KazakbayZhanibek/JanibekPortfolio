@@ -7,11 +7,11 @@ import { cn } from '@/lib/utils'
 export function ProjectPreview({ project, compact = false }: { project: ProjectId; compact?: boolean }) {
   if (project === 'tenge' && !compact) {
     return <div className="aspect-[5/4] overflow-hidden bg-secondary">
-      <img src="/images/projects/tenge-mobile.webp" alt="" width={390} height={844} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
+      <img src={`${import.meta.env.BASE_URL}images/projects/tenge-mobile.webp`} alt="" width={390} height={844} loading="lazy" decoding="async" className="h-full w-full object-cover object-top" />
     </div>
   }
   return <img
-    src={`/images/projects/${project}-desktop.webp`}
+    src={`${import.meta.env.BASE_URL}images/projects/${project}-desktop.webp`}
     alt=""
     width={1440}
     height={1000}
@@ -26,7 +26,7 @@ export function ProjectScreenshots({ project, name, language }: { project: Proje
   const [device, setDevice] = useState<'desktop' | 'mobile'>('desktop')
   const t = copy[language]
   const mobile = device === 'mobile'
-  const image = `/images/projects/${project}-${device}.webp`
+  const image = `${import.meta.env.BASE_URL}images/projects/${project}-${device}.webp`
 
   return <section aria-labelledby="project-screenshots-heading">
     <div className="mb-4 flex flex-wrap items-center justify-between gap-x-5 gap-y-2">
