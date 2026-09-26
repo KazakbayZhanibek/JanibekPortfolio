@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.agents/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+.env*
+!.env.example

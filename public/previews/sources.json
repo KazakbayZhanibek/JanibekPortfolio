@@ -1,0 +1,24 @@
+{
+  "mountains.jpg": {
+    "path": "assets/mountains.jpg",
+    "kind": "stock photograph",
+    "source": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?fit=crop&w=1800&q=85&fm=jpg",
+    "license": "Unsplash License",
+    "use": "Editorial preview only. Not a photograph by or of Zhanibek; no location is asserted."
+  },
+  "prata.ttf": {
+    "path": "assets/prata.ttf",
+    "source": "https://fonts.gstatic.com/s/prata/v22/6xKhdSpbNNCT-vWI.ttf",
+    "license": "assets/prata-OFL.txt",
+    "use": "Notebook and editorial previews."
+  },
+  "unbounded-800.ttf": {
+    "path": "assets/unbounded-800.ttf",
+    "source": "https://fonts.gstatic.com/s/unbounded/v12/Yq6F-LOTXCb04q32xlpat-6uR42XTqtG65j2040.ttf",
+    "license": "assets/unbounded-OFL.txt",
+    "use": "Selected poster homepage and poster preview."
+  },
+  "notebook.webp": {"kind":"Browser screenshot, not generated artwork","source":"design-preview.html?view=notebook&capture=1","viewport":[1440,1000],"deviceScaleFactor":1},
+  "editorial.webp": {"kind":"Browser screenshot, not generated artwork","source":"design-preview.html?view=editorial&capture=1","viewport":[1440,1000],"deviceScaleFactor":1},
+  "poster.webp": {"kind":"Browser screenshot, not generated artwork","source":"design-preview.html?view=poster&capture=1","viewport":[1440,1000],"deviceScaleFactor":1}
+}

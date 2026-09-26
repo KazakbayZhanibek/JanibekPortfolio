@@ -1,0 +1,46 @@
+{
+  "capturedOn": "2026-09-24",
+  "format": "image/webp",
+  "quality": 88,
+  "viewports": { "desktop": { "width": 1440, "height": 1000 }, "mobile": { "width": 390, "height": 844 } },
+  "method": "Real Chromium viewport captures at device scale 1. Original application appearance preserved; no invented UI or mock API responses. Screenshots remain in the source interface language.",
+  "projects": {
+    "rano": {
+      "files": ["projects/rano-desktop.webp", "projects/rano-mobile.webp"],
+      "source": "https://rano-comfort.vercel.app/",
+      "repository": "https://github.com/KazakbayZhanibek/rano-comfort",
+      "state": "Public storefront home; no checkout or payment performed.",
+      "limitations": "Original transparent heading-span defect preserved. Original mobile page overflows to a 436px layout viewport; capture uses the requested 390px device viewport. Website business metrics are source-page claims, not independently verified outcomes."
+    },
+    "tenge": {
+      "files": ["projects/tenge-desktop.webp", "projects/tenge-mobile.webp"],
+      "source": "https://kazakbayzhanibek.github.io/shts/",
+      "repository": "https://github.com/KazakbayZhanibek/shts",
+      "state": "Original built-in seedDemo data loaded through the app UI into isolated localStorage: seven sample transactions, two goals and one deposit. Google Apps Script domains blocked before navigation; no private finances or cloud synchronization.",
+      "galleryTreatment": "Top-aligned 5:4 crop of the mobile screenshot. Both original viewport captures remain available in the viewer."
+    },
+    "jan-plov": {
+      "files": ["projects/jan-plov-desktop.webp", "projects/jan-plov-mobile.webp"],
+      "source": "https://kazakbayzhanibek.github.io/Jan-plov/",
+      "repository": "https://github.com/KazakbayZhanibek/Jan-plov",
+      "state": "Public home hero with original site photography and branding; no inquiry or WhatsApp message sent.",
+      "limitations": "Original mobile CSS hides the hero photograph; preserved without retouching. Business claims and image authorship were not independently verified."
+    },
+    "bulbul": {
+      "files": ["projects/bulbul-desktop.webp", "projects/bulbul-mobile.webp"],
+      "source": "https://github.com/KazakbayZhanibek/bulbul-forum",
+      "revision": "c7845a917c5e615571559ad2b6e55e8150885632",
+      "state": "Real local FastAPI/SQLite backend and original frontend. Anonymous feed with three source-provided sample posts and sample counters; not evidence of live community adoption. No authentication, real accounts, private messages or remote API access.",
+      "localConfiguration": "Temporary API origin redirected to localhost; signing secret and seed password randomized; disposable database. Temporary sources, dependencies and services removed after capture.",
+      "limitations": "Original mobile header overflow/clipped registration control preserved. Source service worker has unresolved conflict markers; normal feed rendered without changing it."
+    },
+    "calories": {
+      "files": ["projects/calories-desktop.webp", "projects/calories-mobile.webp"],
+      "source": "https://github.com/KazakbayZhanibek/calorie_tracker",
+      "revision": "6cd7b7c6d8e75d0dad78107d3f4b26d1be10f94a",
+      "state": "Real local FastAPI/SQLite app with a fresh disposable database. Three fictitious entries marked пример added through the actual localhost API: oatmeal 340, apple 95, yogurt 120; total 555. Original daily goal 2000. Not personal health records.",
+      "attribution": "Original interface credits Жанибек, Данчо and Димаш. Sole authorship is not claimed. Team dialog was never opened; portrait assets and repository database were not downloaded.",
+      "limitations": "Mobile capture ends at the table total; history is below the viewport. Temporary app, database, dependencies and services removed after capture."
+    }
+  }
+}

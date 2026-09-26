@@ -1,0 +1,30 @@
+{
+  "scope": "direction",
+  "mode": "read",
+  "seed": "5ea71aa6",
+  "mechanism": "A visitor gets to know Zhanibek through a true personal story, everyday interests and supporting projects.",
+  "audienceScene": "A curious visitor on a phone or laptop wants to understand the person, not evaluate a job applicant.",
+  "culturalHome": "Student life, learning to code, personal notes, everyday graphic culture and time in nature.",
+  "rejectedDefaults": ["Sparse charcoal portfolio with a large name and long same-looking text sections", "A light recoloring of the same generic hero and card template"],
+  "groundedCandidates": [
+    {"index":1,"name":"Выше шума","system":"Outdoor editorial magazine","reason":"Real interests become a photographic personal spread, not a project catalog."},
+    {"index":2,"name":"Афиша","system":"Student culture poster","reason":"Type hierarchy and compact real facts make the person memorable."},
+    {"index":3,"name":"Адресная книга","system":"Personal address-book interface","reason":"Friendly identity and topic navigation remain useful on small screens."},
+    {"index":4,"name":"Линия","system":"Wayfinding graphic program","reason":"School, present study and interests form an honest navigable story."},
+    {"index":5,"name":"Слои","system":"Graphic software inspector","reason":"Topic layers translate a developer's screen culture without a fake terminal."},
+    {"index":6,"name":"Обложка","system":"Album liner-note typography","reason":"Name, narrative and supporting artifacts form one coherent reading object; no music biography is claimed."},
+    {"index":7,"name":"Открытый блокнот","system":"Blue-ink observation sheet","reason":"Organized personal notes and prose replace empty marketing space without inventing a CV."}
+  ],
+  "assignedIndex": 7,
+  "presentedWorkingPreviews": ["notebook", "editorial", "poster"],
+  "choice": {"optionId":"poster","buildPath":"code","buildPathFlipped":false},
+  "chosenSource": "posters-covers-sleeves-plakatstil-object-poster",
+  "authority": "User selected poster on the local decision board. Existing FRAME palette/composition is no longer visual authority; biography and functional project viewing remain preserved.",
+  "world": "A personal poster wall using oxblood, mustard, moss, slate and cream; Unbounded display type with readable Manrope prose.",
+  "firstViewport": "Zhanibek is the dominant subject; readable age, university and human introduction beside purposeful topic-sheet navigation. No project-cover hero, fake portrait or decorative credentials.",
+  "visitorPath": "About, life outside code, then projects; direct source links and screenshot viewer remain usable.",
+  "signatureInteraction": "Topic navigation hard-swaps whole colored sheets, with clear selected state, keyboard access, and no motion required to understand content.",
+  "responsive": "Sheets retile into one column; text and controls remain readable at 320px. No giant clipped typography or horizontal scroll.",
+  "proofRequirement": "Desktop/mobile previews and final site must be visually captured and inspected; bilingual content, topic selection and all five project viewers exercised.",
+  "certificates": "Awaiting user files; no invented public count or badges."
+}

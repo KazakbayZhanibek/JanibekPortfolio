@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T17:46:28.706Z",
+  "title": "Design System: Zhanibek — Живой плакат",
+  "extensions": {
+    "colorMeta": {
+      "oxblood": {
+        "role": "primary",
+        "displayName": "Oxblood",
+        "purpose": "About sheet and ink on mustard; global fallback background."
+      },
+      "mustard": {
+        "role": "primary",
+        "displayName": "Mustard",
+        "purpose": "Outside-code sheet, selected language and global fallback action/focus."
+      },
+      "moss": {
+        "role": "secondary",
+        "displayName": "Moss",
+        "purpose": "Projects sheet and topic tile."
+      },
+      "slate": {
+        "role": "secondary",
+        "displayName": "Slate",
+        "purpose": "Outer surround; global fallback secondary."
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "purpose": "Reading text on the dark sheets and surround."
+      },
+      "muted-foreground": {
+        "role": "neutral",
+        "displayName": "Muted cream",
+        "purpose": "Global fallback role; overridden by the displayed project inside the viewer."
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Oxblood hover accent",
+        "purpose": "Global fallback role; overridden by the displayed project inside the viewer."
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Viewer rule",
+        "purpose": "Global fallback role; overridden by the displayed project inside the viewer."
+      },
+      "alternative-notebook-blue": {
+        "role": "primary",
+        "displayName": "Notebook only — blue ink",
+        "scope": "notebook"
+      },
+      "alternative-notebook-paper": {
+        "role": "neutral",
+        "displayName": "Notebook only — paper",
+        "scope": "notebook"
+      },
+      "alternative-notebook-ink": {
+        "role": "neutral",
+        "displayName": "Notebook only — prose ink",
+        "scope": "notebook"
+      },
+      "alternative-notebook-muted": {
+        "role": "neutral",
+        "displayName": "Notebook only — muted notes",
+        "scope": "notebook"
+      },
+      "alternative-editorial-forest": {
+        "role": "primary",
+        "displayName": "Editorial only — forest",
+        "scope": "editorial"
+      },
+      "alternative-editorial-paper": {
+        "role": "neutral",
+        "displayName": "Editorial only — paper",
+        "scope": "editorial"
+      },
+      "alternative-editorial-rust": {
+        "role": "secondary",
+        "displayName": "Editorial only — rust",
+        "scope": "editorial"
+      },
+      "alternative-editorial-muted": {
+        "role": "neutral",
+        "displayName": "Editorial only — muted green",
+        "scope": "editorial"
+      },
+      "alternative-editorial-sage": {
+        "role": "neutral",
+        "displayName": "Editorial only — inverse sage",
+        "scope": "editorial"
+      },
+      "viewer-rano-background": {
+        "role": "secondary",
+        "displayName": "RANO viewer green",
+        "scope": "project-viewer"
+      },
+      "viewer-rano-foreground": {
+        "role": "neutral",
+        "displayName": "RANO viewer text",
+        "scope": "project-viewer"
+      },
+      "viewer-rano-primary": {
+        "role": "primary",
+        "displayName": "RANO viewer action",
+        "scope": "project-viewer"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Poster name",
+        "purpose": "Uppercase name; locally hosted Unbounded 800."
+      },
+      "headline": {
+        "displayName": "Poster headline",
+        "purpose": "About and Projects headings."
+      },
+      "interests-headline": {
+        "displayName": "Interests headline",
+        "purpose": "The large stacked Outside-code heading."
+      },
+      "body": {
+        "displayName": "Reading prose",
+        "purpose": "Manrope biography and interests paragraphs."
+      },
+      "introduction": {
+        "displayName": "Introduction",
+        "purpose": "Base 18px introduction; About and Outside code become 20px at 640px. Projects stays at 18px."
+      },
+      "caption": {
+        "displayName": "Project metadata",
+        "purpose": "Manrope project subtitle/category with explicit leading."
+      },
+      "viewer-position": {
+        "displayName": "Viewer position only",
+        "purpose": "IBM Plex Mono numeric position with tabular numerals; not a general label font."
+      },
+      "alternative-notebook-display": {
+        "displayName": "Notebook only — Manrope display",
+        "purpose": "Retained notebook preview name.",
+        "scope": "notebook"
+      },
+      "alternative-notebook-accent": {
+        "displayName": "Notebook only — Prata interests",
+        "purpose": "Retained notebook preview interests fragment.",
+        "scope": "notebook"
+      },
+      "alternative-editorial-display": {
+        "displayName": "Editorial only — Prata display",
+        "purpose": "Retained editorial preview name; other editorial headings also use Prata.",
+        "scope": "editorial"
+      }
+    },
+    "shadows": [
+      {
+        "name": "poster-and-viewer",
+        "value": "none",
+        "purpose": "Sheets, project cards and the project viewer frame are flat."
+      },
+      {
+        "name": "outline-control",
+        "value": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+        "purpose": "The retained outline Button shadow-xs; not an elevation scale."
+      }
+    ],
+    "motion": [
+      {
+        "name": "topic-change",
+        "value": "none",
+        "purpose": "Hard-swap the selected sheet and return scroll to top instantly; no hero BlurFade."
+      },
+      {
+        "name": "gallery-tilt-bound",
+        "value": "1.8deg",
+        "purpose": "Maximum positive or negative rotation on each axis; only gallery mode, mouse events, hover, fine pointer and no reduced-motion preference."
+      },
+      {
+        "name": "gallery-perspective",
+        "value": "1400px",
+        "purpose": "Pointer-driven CardContainer perspective; requestAnimationFrame/ref updates."
+      },
+      {
+        "name": "gallery-transform",
+        "value": "transform 300ms ease-out",
+        "purpose": "Motion-safe gallery transition; leave, cancel or preference changes clear the transform."
+      },
+      {
+        "name": "dialog-state",
+        "value": "200ms",
+        "purpose": "Declared dialog primitive state duration with fade/zoom classes, not a topic transition."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none; scroll-behavior: auto",
+        "purpose": "Base-layer declarations; utility-level color transitions may still apply. Dialog animation and gallery tilt have additional explicit reduced-motion opt-outs."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px",
+        "purpose": "Main padding, two-column gallery, viewer width/type and larger row thumbnails; biography remains single-column."
+      },
+      {
+        "name": "lg",
+        "value": "1024px",
+        "purpose": "Main sheet plus sticky topic rail; topic descriptions become visible."
+      },
+      {
+        "name": "notebook-topics-only",
+        "value": "440px",
+        "purpose": "Retained notebook preview topic links become three columns; not a main-site breakpoint."
+      }
+    ],
+    "layout": {
+      "shellMaxWidth": "1600px",
+      "minimumWidth": "320px",
+      "desktopGrid": "minmax(0, 1fr) minmax(240px, 0.36fr)",
+      "topicGrid": "repeat(3, minmax(0, 1fr)) below 1024px; one column from 1024px",
+      "stickyTopicTop": "12px",
+      "viewerMaxHeight": "92dvh",
+      "viewerSmallMaxWidth": "calc(100% - 1.5rem)",
+      "viewerLargeMaxWidth": "1056px from 640px",
+      "viewerBody": "overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable",
+      "overlay": "rgb(0 0 0 / 0.5)"
+    },
+    "focus": {
+      "posterControl": "2px solid currentColor; outline-offset: -6px",
+      "projectHitArea": "2px solid currentColor; outline-offset: 4px",
+      "viewerHeading": "2px project-action ring with 4px project-surface offset",
+      "viewerButton": "3px half-opacity project-action ring with inherited base offset treatment",
+      "minimumControlTarget": "44px"
+    },
+    "alternativeScopes": {
+      "notebook": {
+        "entry": "design-preview.html?view=notebook",
+        "source": "src/previews/notebook.tsx",
+        "palettePrefix": "alternative-notebook-",
+        "typography": [
+          "alternative-notebook-display",
+          "alternative-notebook-accent"
+        ],
+        "localSize": "15px topic labels",
+        "status": "Intentionally retained comparison direction, not main-site drift."
+      },
+      "editorial": {
+        "entry": "design-preview.html?view=editorial",
+        "source": "src/previews/editorial.tsx",
+        "palettePrefix": "alternative-editorial-",
+        "typography": [
+          "alternative-editorial-display"
+        ],
+        "status": "Intentionally retained forest/Prata comparison direction with Manrope prose and attributed mountain imagery."
+      },
+      "poster": {
+        "entry": "design-preview.html?view=poster",
+        "source": "src/previews/poster.tsx",
+        "localSize": "1.75rem desktop topic titles",
+        "status": "Retained selected-world comparison; shares main palette/type but is not the main application's full project viewer."
+      }
+    },
+    "development": {
+      "mode": "scan",
+      "seed": "5ea71aa6",
+      "choice": "poster",
+      "world": "Живой плакат",
+      "buildPath": "code",
+      "choiceAuthority": "User selected poster in the local native direction board after rejecting FRAME.",
+      "chosenSource": "posters-covers-sleeves-plakatstil-object-poster",
+      "compApproved": false,
+      "selectionRecord": ".impeccable/personal-direction-selection.json",
+      "surfaceContract": ".impeccable/surfaces/src-app-tsx.md",
+      "sourceFiles": [
+        "src/App.tsx",
+        "src/index.css",
+        "src/fonts.css",
+        "src/main.tsx",
+        "src/components/ui/button.tsx",
+        "src/components/ui/dialog.tsx",
+        "src/components/ui/3d-card.tsx",
+        "src/components/project-dialog.tsx",
+        "src/components/project-exhibits.tsx",
+        "src/previews/notebook.tsx",
+        "src/previews/editorial.tsx",
+        "src/previews/poster.tsx"
+      ],
+      "inspectedEvidence": [
+        ".impeccable/review/desktop.png",
+        ".impeccable/review/mobile.png",
+        ".impeccable/review/poster-gallery-desktop.png",
+        ".impeccable/review/poster-dialog-mobile.png",
+        ".impeccable/review/poster-verification.json"
+      ],
+      "reviewDisposition": "Fresh visual review: ship; independent behavior review: no material findings (parent-provided review results).",
+      "detectorDisposition": "Only stale-documentation warnings: Prata/Unbounded and preview-local 15px / 1.75rem sizes. Documented scopes; no source changes warranted.",
+      "documentationVerification": "Source extraction and existing image/evidence inspection only; no build, test, lint, formatter or browser run in this documentation pass.",
+      "limits": [
+        "No invented tonal ramps: the source defines flat colors, not an eight-step scale.",
+        "Component snippets are literal CSS visual specimens, not React behavior replicas; application focus restoration, sheet selection and pointer tracking remain in source.",
+        "Font families use fallbacks if the host has not loaded the project's locally hosted fonts.",
+        "Primitives are owned by DESIGN.md frontmatter; this sidecar has no legacy tokens bag.",
+        "No input/form, portrait or certificate specimens: none exist on the main site."
+      ]
+    },
+    "projectViewerThemes": {
+      "source": "src/index.css .project-dialog[data-project]",
+      "selection": "src/components/project-dialog.tsx data-project",
+      "scope": "Only the project viewer; poster sheets and screenshot pixels unchanged.",
+      "transition": "Immediate frame color change; Tailwind @theme is non-inline for inherited semantic overrides.",
+      "palettes": {
+        "rano": {
+          "background": "#10452b",
+          "foreground": "#f1f8ef",
+          "primary": "#c1e5a5",
+          "muted-foreground": "#c2d9c5",
+          "accent": "#205b3b",
+          "border": "#6b9575"
+        },
+        "tenge": {
+          "background": "#30256b",
+          "foreground": "#f4f2ff",
+          "primary": "#dad3ff",
+          "muted-foreground": "#cdc6ef",
+          "accent": "#44367f",
+          "border": "#8376b8"
+        },
+        "jan-plov": {
+          "background": "#35251b",
+          "foreground": "#f3e6d2",
+          "primary": "#f4ad70",
+          "muted-foreground": "#d9c2ac",
+          "accent": "#533627",
+          "border": "#a17b5d"
+        },
+        "bulbul": {
+          "background": "#17191a",
+          "foreground": "#efeee8",
+          "primary": "#d9e4e5",
+          "muted-foreground": "#c2c5c3",
+          "accent": "#303638",
+          "border": "#747c7e"
+        },
+        "calories": {
+          "background": "#eaf3eb",
+          "foreground": "#193e29",
+          "primary": "#176e3d",
+          "primary-foreground": "#ffffff",
+          "muted-foreground": "#47624d",
+          "accent": "#d0e3d3",
+          "border": "#6c8973"
+        }
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Viewer primary link",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "RANO green-palette icon-bearing public-site link used where a real destination exists.",
+      "html": "<a class=\"ds-primary\" href=\"https://rano-comfort.vercel.app/\" target=\"_blank\" rel=\"noreferrer\">Открыть сайт<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a>",
+      "css": ".ds-primary { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:8px 12px; border:0; border-radius:6px; background:#c1e5a5; color:#10452b; font:500 14px/20px 'Manrope Variable',sans-serif; text-decoration:none; transition:all 150ms cubic-bezier(0.4,0,0.2,1); } .ds-primary:hover { background:rgb(193 229 165 / 0.9); } .ds-primary:focus-visible { outline:none; box-shadow:0 0 0 4px #10452b,0 0 0 7px rgb(193 229 165 / 0.5); } @media(prefers-reduced-motion:reduce) { .ds-primary { transition:none; } }"
+    },
+    {
+      "name": "Viewer outline source link",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Bordered source link on the opaque green RANO viewer.",
+      "html": "<a class=\"ds-outline\" href=\"https://github.com/KazakbayZhanibek/rano-comfort\" target=\"_blank\" rel=\"noreferrer\">Исходный код<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg></a>",
+      "css": ".ds-outline { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:8px 12px; border:1px solid #6b9575; border-radius:6px; background:#10452b; color:#f1f8ef; box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05); font:500 14px/20px 'Manrope Variable',sans-serif; text-decoration:none; transition:all 150ms cubic-bezier(0.4,0,0.2,1); } .ds-outline:hover { background:#205b3b; } .ds-outline:focus-visible { outline:none; border-color:#c1e5a5; box-shadow:0 0 0 4px #10452b,0 0 0 7px rgb(193 229 165 / 0.5); } @media(prefers-reduced-motion:reduce) { .ds-outline { transition:none; } }"
+    },
+    {
+      "name": "Viewer ghost navigation",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Previous/next visual control specimen on the RANO viewer's green surface.",
+      "html": "<div class=\"ds-ghost-surface\"><button class=\"ds-ghost\" type=\"button\">Далее<svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-7-7 7 7-7 7\"/></svg></button></div>",
+      "css": ".ds-ghost-surface { background:#10452b; padding:12px; } .ds-ghost { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:8px; border:0; border-radius:6px; background:transparent; color:#f1f8ef; font:500 12px/16px 'Manrope Variable',sans-serif; cursor:pointer; transition:color 150ms,background-color 150ms; } .ds-ghost:hover { background:#205b3b; } .ds-ghost:focus-visible { outline:none; box-shadow:0 0 0 4px #10452b,0 0 0 7px rgb(193 229 165 / 0.5); } @media(min-width:640px) { .ds-ghost { padding-inline:12px; font-size:14px; line-height:20px; } } @media(prefers-reduced-motion:reduce) { .ds-ghost { transition:none; } }"
+    },
+    {
+      "name": "Selected screenshot device",
+      "kind": "button",
+      "refersTo": "screenshot-selected",
+      "description": "Selected device retains its project-action fill on hover; source owns screenshot switching.",
+      "html": "<button class=\"ds-device\" type=\"button\" aria-pressed=\"true\"><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><rect x=\"6\" y=\"2\" width=\"12\" height=\"20\" rx=\"2\"/><path d=\"M11 18h2\"/></svg>Телефон</button>",
+      "css": ".ds-device { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:8px 12px; border:0; border-radius:6px; background:#c1e5a5; color:#10452b; font:500 12px/16px 'Manrope Variable',sans-serif; cursor:pointer; } .ds-device:hover { background:#c1e5a5; color:#10452b; } .ds-device:focus-visible { outline:none; box-shadow:0 0 0 4px #10452b,0 0 0 7px rgb(193 229 165 / 0.5); }"
+    },
+    {
+      "name": "Selected topic tile",
+      "kind": "nav",
+      "refersTo": "topic-about",
+      "description": "About topic specimen with visible selected text and check; no simulated sheet-switch runtime.",
+      "html": "<nav aria-label=\"Темы личного сайта\"><button class=\"ds-topic\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-topic-top\"><span class=\"ds-topic-title\">Обо мне</span><svg class=\"ds-topic-check\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"m20 6-11 11-5-5\"/></svg></span><span class=\"ds-topic-description\">Что мне интересно и как всё началось.</span><span class=\"ds-topic-state\">Открыто</span></button></nav>",
+      "css": ".ds-topic { display:flex; width:100%; min-height:112px; flex-direction:column; justify-content:space-between; gap:20px; padding:12px; border:0; border-radius:0; background:#7a0f19; color:#f3e6d2; text-align:left; font-family:'Manrope Variable',sans-serif; cursor:pointer; } .ds-topic-top { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; width:100%; } .ds-topic-title { font-family:Unbounded,sans-serif; font-size:clamp(0.75rem,2.6vw,1.1rem); font-weight:800; line-height:1.4; } .ds-topic-check { display:none; flex-shrink:0; width:20px; height:20px; margin-top:2px; } .ds-topic-description { display:none; max-width:224px; font-size:16px; line-height:1.625; } .ds-topic-state { width:fit-content; border-bottom:1px solid currentColor; font-size:12px; line-height:20px; } .ds-topic:focus-visible { outline:2px solid currentColor; outline-offset:-6px; } @media(min-width:640px) { .ds-topic { padding:20px; } .ds-topic-check { display:block; } .ds-topic-state { font-size:14px; } } @media(min-width:1024px) { .ds-topic { min-height:240px; padding:28px; } .ds-topic-title { font-size:clamp(1.25rem,1.8vw,1.75rem); } .ds-topic-check { width:28px; height:28px; } .ds-topic-description { display:block; } }"
+    },
+    {
+      "name": "Selected category filter",
+      "kind": "button",
+      "refersTo": "project-filter",
+      "description": "Underline selection rather than a chip or pill; no hover fill is added.",
+      "html": "<div class=\"ds-filter-surface\"><button class=\"ds-filter\" type=\"button\" aria-pressed=\"true\">Все</button></div>",
+      "css": ".ds-filter-surface { background:#515b3d; padding:8px; } .ds-filter { min-height:44px; padding:0 8px; border:0; border-bottom:2px solid currentColor; border-radius:0; background:transparent; color:#f3e6d2; font:700 12px/16px 'Manrope Variable',sans-serif; cursor:pointer; } .ds-filter:focus-visible { outline:2px solid currentColor; outline-offset:-6px; } @media(min-width:640px) { .ds-filter { padding-inline:12px; } }"
+    },
+    {
+      "name": "Project list row",
+      "kind": "card",
+      "refersTo": "project-row",
+      "description": "Real RANO thumbnail and full-row hit area; this static specimen intentionally has no viewer-opening runtime or gallery tilt.",
+      "html": "<div class=\"ds-row-surface\"><article class=\"ds-row\"><img class=\"ds-row-image\" src=\"/images/projects/rano-desktop.webp\" alt=\"\" width=\"1440\" height=\"1000\"/><div class=\"ds-row-copy\"><h3 class=\"ds-row-title\">RANO Comfort</h3><p class=\"ds-row-subtitle\">Магазин бытовой химии</p><p class=\"ds-row-category\">Магазин</p></div><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 7h10v10M7 17 17 7\"/></svg><button class=\"ds-row-open\" type=\"button\" aria-label=\"Открыть RANO Comfort\"></button></article></div>",
+      "css": ".ds-row-surface { background:#515b3d; color:#f3e6d2; padding:8px; } .ds-row { position:relative; display:grid; grid-template-columns:4rem minmax(0,1fr) 1.5rem; align-items:center; gap:12px; min-width:0; padding:20px 0; font-family:'Manrope Variable',sans-serif; } .ds-row-image { display:block; width:100%; height:72px; object-fit:cover; object-position:top; border-radius:0; } .ds-row-copy { min-width:0; } .ds-row-title { margin:0; font-size:16px; font-weight:700; line-height:1.375; } .ds-row-subtitle { margin:4px 0 0; font-size:12px; line-height:20px; opacity:0.9; } .ds-row-category { margin:8px 0 0; font-size:12px; line-height:20px; } .ds-row-open { position:absolute; inset:0; z-index:1; width:100%; border:0; border-radius:0; background:transparent; color:inherit; cursor:pointer; } .ds-row-open:focus-visible { outline:2px solid currentColor; outline-offset:4px; } @media(min-width:640px) { .ds-row { grid-template-columns:7rem minmax(0,1fr) 2rem; gap:20px; } .ds-row-image { height:88px; } .ds-row-title { font-size:20px; } }"
+    },
+    {
+      "name": "Viewer position",
+      "kind": "custom",
+      "refersTo": "viewer-position",
+      "description": "The only IBM Plex Mono role on the main site; numeric project position.",
+      "html": "<div class=\"ds-position-surface\"><span class=\"ds-position\" aria-label=\"Проект 1 из 5\">1 / 5</span></div>",
+      "css": ".ds-position-surface { background:#10452b; padding:12px; } .ds-position { flex-shrink:0; white-space:nowrap; color:#c2d9c5; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:400; font-variant-numeric:tabular-nums; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Живой плакат",
+    "overview": "A personal poster wall: bold lettering and whole colored sheets make the person memorable, while generous leading keeps his story easy to read. Solid ink-like colors, square edges and direct topic selection replace the rejected FRAME world; this is not a light recoloring of the old résumé-style composition.\n\nThe identity is personal, candid and readable, not recruiting or service sales. Real project screenshots support the story without becoming a substitute portrait. No portrait or certificate material has been supplied, so neither is fabricated or represented by decorative placeholders.",
+    "keyCharacteristics": [
+      "Opaque oxblood, mustard and moss sheets on a slate surround, with cream reading text.",
+      "Unbounded display lettering paired with Manrope prose; mono only for viewer position.",
+      "Square, flat poster geometry with explicit selection and visible keyboard focus.",
+      "Immediate topic changes; motion is optional and confined to bounded gallery response."
+    ],
+    "rules": [
+      {
+        "name": "The Whole Sheet Rule",
+        "body": "Preserve the oxblood/cream, mustard/oxblood and moss/cream pairings; do not add translucent main reading surfaces or recolor project captures to fit them.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use Unbounded for the main poster's display hierarchy and Manrope for reading and controls; keep IBM Plex Mono confined to viewer position and Prata confined to retained alternatives.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do keep the person and truthful biography ahead of supporting project evidence.",
+      "Do preserve opaque sheet pairings, square poster geometry and readable bilingual reflow down to 320px.",
+      "Do show selected state in text or underline as well as color, with visible keyboard focus and 44px control targets.",
+      "Do preserve original screenshot colors, source attribution, sample-data disclosure and team credit.",
+      "Do retain all three comparison previews with their explicitly scoped alternative palettes and typography."
+    ],
+    "donts": [
+      "Don't restore FRAME colors, its rounded exhibit geometry or the hero BlurFade.",
+      "Don't mix Prata, notebook blue or editorial forest into the main poster identity.",
+      "Don't invent biography, credentials, portraits, contact details, results or service/recruiting claims.",
+      "Don't require hover or motion to read content, select topics or open projects.",
+      "Don't treat the preview-local 15px and 1.75rem sizes as main-site drift or fabricate unused inputs and tonal ramps."
+    ]
+  }
+}

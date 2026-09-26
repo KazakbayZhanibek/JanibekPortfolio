@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Manrope Variable', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --color-background: #7a0f19;
+  --color-foreground: #f3e6d2;
+  --color-card: #68151c;
+  --color-card-foreground: #f3e6d2;
+  --color-primary: #edb92f;
+  --color-primary-foreground: #7a0f19;
+  --color-secondary: #223a42;
+  --color-secondary-foreground: #f3e6d2;
+  --color-muted: #67151e;
+  --color-muted-foreground: #e1c9b8;
+  --color-accent: #9b2933;
+  --color-accent-foreground: #f3e6d2;
+  --color-border: #b97169;
+  --color-input: #b97169;
+  --color-ring: #edb92f;
+  --color-destructive: #ffbbb0;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth bg-background text-foreground antialiased;
+    color-scheme: dark;
+    scrollbar-color: #c4a286 #223a42;
+    scrollbar-width: thin;
+  }
+  body { @apply m-0 min-w-80 font-sans; }
+  button, a, input { @apply touch-manipulation; }
+  button:not(:disabled), a { @apply cursor-pointer; }
+  button, a, input, summary { @apply outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-background; }
+  input { @apply caret-primary; }
+  ::selection { @apply bg-primary text-primary-foreground; }
+  @media (prefers-reduced-motion: reduce) {
+    html { @apply scroll-auto; }
+    *, ::before, ::after { @apply animate-none transition-none; }
+  }
+}
+
+@layer components {
+  .project-dialog {
+    --color-card: var(--color-background);
+    --color-card-foreground: var(--color-foreground);
+    --color-primary-foreground: var(--color-background);
+    --color-secondary: var(--color-accent);
+    --color-secondary-foreground: var(--color-foreground);
+    --color-muted: var(--color-accent);
+    --color-accent-foreground: var(--color-foreground);
+    --color-input: var(--color-border);
+    --color-ring: var(--color-primary);
+    color-scheme: dark;
+    scrollbar-color: var(--color-border) var(--color-background);
+  }
+
+  .project-dialog[data-project="rano"] {
+    --color-background: #10452b;
+    --color-foreground: #f1f8ef;
+    --color-primary: #c1e5a5;
+    --color-muted-foreground: #c2d9c5;
+    --color-accent: #205b3b;
+    --color-border: #6b9575;
+  }
+
+  .project-dialog[data-project="tenge"] {
+    --color-background: #30256b;
+    --color-foreground: #f4f2ff;
+    --color-primary: #dad3ff;
+    --color-muted-foreground: #cdc6ef;
+    --color-accent: #44367f;
+    --color-border: #8376b8;
+  }
+
+  .project-dialog[data-project="jan-plov"] {
+    --color-background: #35251b;
+    --color-foreground: #f3e6d2;
+    --color-primary: #f4ad70;
+    --color-muted-foreground: #d9c2ac;
+    --color-accent: #533627;
+    --color-border: #a17b5d;
+  }
+
+  .project-dialog[data-project="bulbul"] {
+    --color-background: #17191a;
+    --color-foreground: #efeee8;
+    --color-primary: #d9e4e5;
+    --color-muted-foreground: #c2c5c3;
+    --color-accent: #303638;
+    --color-border: #747c7e;
+  }
+
+  .project-dialog[data-project="calories"] {
+    --color-background: #eaf3eb;
+    --color-foreground: #193e29;
+    --color-primary: #176e3d;
+    --color-primary-foreground: #ffffff;
+    --color-muted-foreground: #47624d;
+    --color-accent: #d0e3d3;
+    --color-border: #6c8973;
+    color-scheme: light;
+  }
+}
